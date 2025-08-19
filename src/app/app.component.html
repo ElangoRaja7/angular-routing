@@ -1,4 +1,15 @@
 <h1>My app</h1>
+<div>
 <a routerLink="home">Home</a>
+</div>
+<div>
 <a routerLink="settings">Settings</a>
+</div>
+<nav>
+  <ul>
+    <li *ngFor="let route of routes">
+      <a [routerLink]="route.url">{{route.linkName}}</a>
+    </li>
+  </ul>
+</nav>
 <router-outlet></router-outlet>
